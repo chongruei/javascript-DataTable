@@ -19,7 +19,6 @@
   In this simple case, DataTable will be initialised with following config.
   <pre>
     var dataTable = new DataTable({
-      {
         id: 'dataTable',
         columns: [
           {
@@ -35,7 +34,6 @@
             key: 'Age'
           }
         ]
-      }
     })
 
     dataTable.init(); // to initial the DataTable.
