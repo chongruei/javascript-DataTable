@@ -2,7 +2,7 @@
 
 -   Demo: [javascript-DataTable](https://chongruei.github.io/javascript-DataTable/)
 
-# DataTable in plug-in for Javascript(ECMA5):
+# DataTable in plug-in for Javascript(ECMA5)
  
 -   DataTable is a simple library for creating table dom immediately by setting config.
 
