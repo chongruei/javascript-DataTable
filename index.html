@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>javascript datatable demo</title>
+  
+  <link rel="stylesheet" href="./dataTable/dataTable.css">
+  <script src="./dataTable/dataTable.js"></script>
+  
+  <script>
+    var dataTable = null;
+    var dataArr = [
+      {
+        UserName : 'POPO',
+        Age : '26',
+        Gender : 'male',
+        Birthday : '1992/03/22',
+        National : 'Taiwan'
+      },
+      {
+        UserName : 'HEBE',
+        Age : '35',
+        Gender : 'male',
+        Birthday : '1983/03/30',
+        National : 'Taiwan'
+      },
+    ]
+      
+    // demo data list
+    for (i = 0; i < 100; i++) {
+      dataArr.push({
+        UserName : 'POPO' + i,
+        Age : 26 + i,
+        Gender : 'male',
+        Birthday : '1992/03/22',
+        National : 'US'
+      })
+    }
+
+    var config = {
+      id: 'dataTable',
+      columns: [
+        {
+          isIndex: true,
+          header: 'No.'
+        },
+        {
+          header: 'Name',
+          key: 'UserName'
+        },
+        {
+          header: 'Age',
+          key: 'Age'
+        },
+        {
+          header: 'Gender',
+          key: 'Gender'
+        },
+        {
+          header: 'Birthday',
+          key: 'Birthday'
+        },
+        {
+          header: 'Nationality',
+          key: 'National'
+        }
+      ]
+    }
+    
+    window.onload = function () {
+      dataTable = new DataTable(config);
+      dataTable.init();
+
+      dataTable.load(dataArr)
+    }
+    
+    function clearDataTable () {
+      dataTable.load([])
+    }
+
+    function reloadDataTable () {
+      dataTable.load(dataArr)
+    }
+
+  </script>
+  
+  <style>
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+  </style>
+
+</head>
+<body>
+  
+  <div class="container">
+    <button onclick="clearDataTable()">Clear</button>
+    <button onclick="reloadDataTable()">Reload</button>
+    <div id="dataTable"></div>
+  </div>
+</body>
+</html>

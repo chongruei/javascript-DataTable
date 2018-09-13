@@ -1,0 +1,63 @@
+#dataTable > table {
+	font-family:sans-serif;
+	color: #424242;
+	width: 100%;
+	border: none;
+	border-collapse: collapse;
+	margin: 5px 0px 5px 3px;
+	padding: 5px;
+	padding-top: 0px;
+}
+
+#dataTable th {
+	text-align: center;
+	border-bottom: 1px solid #4FC3F7;
+	background-color: #81D4FA;
+	padding: 5px;
+}
+
+#dataTable td {
+	text-align: center;
+	border-bottom: 1px dotted #ddd;
+	padding: 5px 10px;
+}
+
+#dataTable tbody tr:nth-child(even) {
+	background-color: #E1F5FE;
+}
+
+#dataTable tbody tr:hover {
+
+	background-color: #B3E5FC;
+}
+
+#dataTable tfoot {
+	border-top: 1px dotted #ddd;
+	text-align: right;
+}
+
+#dataTable tfoot td {
+	text-align: right;
+	border-bottom: none;
+}
+
+#dataTable button {
+	border: 1px solid #FFFFFF;
+	border-radius: 8px;
+	background: #FFFFFF;
+	padding: 0.5em 1em;
+	margin-left: 2px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#dataTable .btn-select {
+	border: 1px solid #979797;
+	background-color: #FFFFFF;
+}
+
+#dataTable .btn-hover {
+	color: #FFFFFF;
+	border: 1px solid #424242;
+	background-color: #424242;
+}
